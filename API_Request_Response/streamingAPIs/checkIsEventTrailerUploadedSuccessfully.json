@@ -1,0 +1,40 @@
+Request=>
+{
+"appKey": "myAppKey",
+"apiVersion": "1.0",
+"eventID": "E00000002",
+"trailerContentETag": "ebfb439972f7082aa82e104c4248856c",
+"thumbnailContentETag": "35d48e22ce94b78fd40a6b6c857826e4",
+"actionName": "checkIsEventTrailerUploadedSuccessfully"
+}
+Success=>
+{
+"message": "Event trailer uploaded successfully",
+"status": 1,
+"data": {
+"trailerThumbnailFileSize": 132998,
+"trailerFileSize": 38162
+},
+"success": true
+}
+Error=>
+{
+"message": "Event trailer uploaded successfully on AWS S3 but CMS entry operation failed due to some reason",
+"status": 0,
+"data": {
+"trailerFileSize": 0
+}
+,
+"success": false
+}
+
+{
+"message": "Event trailer and thumbnail uploaded successfully on AWS S3 but CMS entry operation failed for thumbnail due to some reason",
+"status": 0,
+"data":
+{
+"trailerThumbnailFileSize": 0,
+"trailerFileSize": 0
+},
+"success": false
+}

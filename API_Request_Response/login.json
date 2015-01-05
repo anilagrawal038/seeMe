@@ -1,0 +1,37 @@
+Request=>
+{
+    "appKey": "myAppKey",
+    "apiVersion": "1.0",
+    "email": "anilagrawal038@gmail.com",
+    "password": "admin",
+    "actionName": "login"
+}
+
+
+
+success=>
+{
+  "message": "Login successfully",
+  "status": 1,
+  "data": {
+    "isAccountVerified": true,
+    "email": "anilagrawal038@gmail.com",
+    "roles": "[ROLE_USER]",
+    "userId": 19,
+    "access_token": "l0rso36s2mq8r3ec9em8c9bbl0u91kh3"
+  },
+  "success": true
+}
+
+
+
+error=>
+{
+  "message": "Account not verified",
+  "status": 0,
+  "data": {
+    "isAccountVerified": false,
+    "userId": 0
+  },
+  "success": false
+}

@@ -1,0 +1,42 @@
+Request=>
+{
+"appKey": "myAppKey",
+"apiVersion": "1.0",
+"eventID": "E00000002",
+"actionName": "fetchEventTrailerUploadDetails"
+}
+Response=>
+{
+"message": "Event trailer upload details fetched successfully",
+"status": 1,
+"data":{
+"s3SecretKey": "dVM0Y1hwMVcvaE5aM2lKQm8yYzNHam0yaC9PWVRTQlBEZ0phUExRbw==",
+"thumbnailKey": "user/FAME0000011/event/E00000001/trailerThumbnail/E00000001_trailer_0_thumbnail.png",
+"trailerAccessPermission": "bucket-owner-full-control",
+"trailerKey": "user/FAME0000011/event/E00000001/trailer/E00000001_trailer_0.mp4",
+"s3AccessKey": "QUtJQUpVRTVBRkkyQlhWQVFUNEE=",
+"bucketName": "ufame",
+"thumbnailAccessPermission": "public-read"
+},
+"success": true
+}
+
+
+Error=>
+{
+"message": "Invalid eventID provided",
+"status": 0,
+"data":
+{}
+,
+"success": false
+}
+
+{
+"message": "Event trailer uploaded successfully on AWS S3 but CMS entry operation failed due to some reason",
+"status": 0,
+"data":{
+"trailerFileSize": 0
+},
+"success": false
+}

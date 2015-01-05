@@ -1,0 +1,28 @@
+Request=>
+{
+    "appKey": "myAppKey",
+    "apiVersion": "1.0",
+    "email": "anilagrawal038+1@gmail.com",
+    "actionName": "resendVerificationToken"
+}
+
+success=>
+{
+  "message": "Account verification send to registered email id successfully",
+  "status": 1,
+  "success": true
+}
+
+error=>
+{
+  "message": "Account with given email id is already verified",
+  "status": 0,
+  "success": false
+}
+
+error=>
+{
+  "message": "Account doesn't exist with given email id",
+  "status": 0,
+  "success": false
+}

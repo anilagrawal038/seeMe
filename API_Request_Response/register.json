@@ -1,0 +1,31 @@
+Request=>
+{
+    "appKey": "myAppKey",
+    "apiVersion": "1.0",
+    "email": "anilagrawal038@gmail.com",
+    "password": "admin",
+    "actionName": "register",
+"username": "anilagrawal038@gmail.com"
+}
+
+
+success=>
+{
+  "message": "User registered successfully",
+  "status": 1,
+  "success": true
+}
+
+
+error=>
+{
+  "message": "User already exist with given email",
+  "status": 0,
+  "success": false
+}
+
+{
+  "message": "User already exist with given username",
+  "status": 0,
+  "success": false
+}

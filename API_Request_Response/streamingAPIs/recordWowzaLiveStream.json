@@ -1,0 +1,19 @@
+Request=>>
+{
+"appKey": "myAppKey",
+"apiVersion": "1.0",
+"eventId": 3,
+"actionName": "recordWowzaLiveStream"
+}
+Response=>>
+{
+"message": "Wowza live stream recording started successfully",
+"status": 1,
+"success": true
+}
+Fail==>>
+{
+"message": "Invalid server response",
+"status": 0,
+"success": false
+}

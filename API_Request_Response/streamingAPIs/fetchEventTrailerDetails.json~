@@ -1,0 +1,26 @@
+Request=>
+{
+"appKey": "myAppKey",
+"apiVersion": "1.0",
+"eventID": "E00000002",
+"actionName": "fetchEventTrailerDetails"
+}
+Success=>
+{
+  "message": "Event trailer details fetched successfully",
+  "status": 1,
+  "data": {
+    "trailers": [
+      {
+        "streamUrls": [
+          {
+            "resolution": "0",
+            "url": "http://54.68.108.229:1935/ch2/_definst_/mp4:amazons3/ufame/user/FAME0000012/event/E00000002/trailer/E00000002_trailer_0.mp4/playlist.m3u8"
+          }
+        ],
+        "videoThumbnail": "http://ufame.s3.amazonaws.com/user/FAME0000012/event/E00000002/trailerThumbnail/E00000002_trailer_0_thumbnail.png"
+      }
+    ]
+  },
+  "success": true
+}

@@ -1,0 +1,22 @@
+Request=>
+ {
+    "appKey": "myAppKey",
+    "apiVersion": "1.0",
+    "email": "anilagrawal038@gmail.com",
+    "verificationToken": "b9df0abb21b143b4a73f5eca65432178",
+    "actionName": "verifyAccount"
+}
+
+success=>
+{
+  "message": "Account verified successfully",
+  "status": 1,
+  "success": true
+}
+
+error=>
+{
+  "message": "Invalid verification token provided",
+  "status": 0,
+  "success": false
+}

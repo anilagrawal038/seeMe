@@ -1,0 +1,18 @@
+Request Header=>
+	Content-Type=application/json
+	X-Auth-Token=ihee6636u0mfbnmo4jaofott5goc89m5
+Request Method=> POST
+
+Request=>
+{
+    "appKey": "myAppKey",
+    "apiVersion": "1.0",
+    "actionName": "logout"
+}
+
+success=>
+{
+  "message": "Logout successfully",
+  "status": 1,
+  "success": true
+}
