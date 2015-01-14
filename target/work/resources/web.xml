@@ -30,6 +30,11 @@
     <filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
     <async-supported>true</async-supported>
   </filter>
+  <filter>
+    <filter-name>AssetPipelineFilter</filter-name>
+    <filter-class>asset.pipeline.AssetPipelineFilter</filter-class>
+    <async-supported>true</async-supported>
+  </filter>
   <env-entry>
     <env-entry-name>buildModule</env-entry-name>
     <env-entry-type>java.lang.String</env-entry-type>
@@ -49,11 +54,6 @@
             <param-value>true</param-value>
         </init-param>
     </filter>
-  <filter>
-    <filter-name>AssetPipelineFilter</filter-name>
-    <filter-class>asset.pipeline.AssetPipelineFilter</filter-class>
-    <async-supported>true</async-supported>
-  </filter>
   <filter>
     <filter-name>urlMapping</filter-name>
     <filter-class>org.codehaus.groovy.grails.web.mapping.filter.UrlMappingsFilter</filter-class>

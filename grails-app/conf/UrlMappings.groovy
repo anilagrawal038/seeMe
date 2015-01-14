@@ -21,7 +21,9 @@ class UrlMappings {
         "500"(view: '/error')
 
         "/" {
-            String module = System.getProperty('buildModule')
+            controller = 'streamingAdmin'
+            action = 'index'
+            /*String module = System.getProperty('buildModule')
 //            println System.getProperty('user.timezone')
             try {
                 if (module == null) {
@@ -29,6 +31,8 @@ class UrlMappings {
                 }
             } catch (Exception e) {
                 println 'unknown buildModule exp in UrlMappings :' + e
+                println 'setting stream as default module for welcome page'
+                module="stream"
             }
             if (module.equals("stream")) {
                 println(module + ' welome page=> /streamingAdmin/index')
@@ -41,7 +45,7 @@ class UrlMappings {
             } else {
                 println(module + ' welome page=> /index.gsp')
                 "/index.gsp"
-            }
+            }*/
         }
     }
 }

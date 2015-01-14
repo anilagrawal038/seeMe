@@ -446,7 +446,7 @@ grails.plugin.springsecurity.cas.serverUrlPrefix = 'https://Anil-Agrawal:8443/ca
 //grails.plugin.springsecurity.cas.proxyReceptorUrl = '/secure/receptor'
 //grails.plugin.springsecurity.cas.proxyReceptorUrl = 'http://localhost:8085/fameLive/secure/receptor'
 //grails.plugin.springsecurity.cas.proxyReceptorUrl = '/j_spring_cas_security_proxyreceptor'
-grails.plugin.springsecurity.cas.useSingleSignout = true
+grails.plugin.springsecurity.cas.useSingleSignout = false
 
 //AWS Credentials
 famelive.aws.url = 's3.amazonaws.com'
