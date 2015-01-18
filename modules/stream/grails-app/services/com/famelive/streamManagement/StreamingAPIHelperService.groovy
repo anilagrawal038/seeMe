@@ -102,7 +102,7 @@ class StreamingAPIHelperService {
             responseCO.message = StreamMessagesUtil.messageSource.getProperty("stream.register.failed.accountExistWithUsername")
             isNewUser = false
         } else if (user == null && isNewUser) {
-            user = new User(email: registerUserRequestCO.email, username: registerUserRequestCO.username, password: registerUserRequestCO.password, verificationToken: FameLiveUtil.randomString, isAccountVerified: false).save(flush: true, failOnError: true)
+            user = new User(email: registerUserRequestCO.email, username: registerUserRequestCO.username, password: registerUserRequestCO.password, verificationToken: FameLiveUtil.getRandomCode(), isAccountVerified: false).save(flush: true, failOnError: true)
         }
         if (user == null) {
             responseCO.message = StreamMessagesUtil.messageSource.getProperty("stream.register.failed.accountCouldNotBeCreated")
@@ -222,17 +222,17 @@ class StreamingAPIHelperService {
     }
 
     ResponseCO logout(LogoutRequestCO logoutRequestCO) {
-        ResponseCO responseCO=new ResponseCO()
-            boolean isLoggedOut = streamingAPISecurityService.logoutUser(logoutRequestCO.request, logoutRequestCO.response)
-            if (isLoggedOut) {
-                responseCO.message = StreamMessagesUtil.messageSource.getProperty("stream.logout.success")
-                responseCO.success = true
-                responseCO.status = CommonStreamingConstants.STREAMING_API_SUCCESS_CODE
-            } else {
-                responseCO.message = StreamMessagesUtil.messageSource.getProperty("stream.logout.failed.someErrorOccurred")
-                responseCO.success = false
-                responseCO.status = CommonStreamingConstants.STREAMING_API_ERROR_CODE
-            }
+        ResponseCO responseCO = new ResponseCO()
+        boolean isLoggedOut = streamingAPISecurityService.logoutUser(logoutRequestCO.request, logoutRequestCO.response)
+        if (isLoggedOut) {
+            responseCO.message = StreamMessagesUtil.messageSource.getProperty("stream.logout.success")
+            responseCO.success = true
+            responseCO.status = CommonStreamingConstants.STREAMING_API_SUCCESS_CODE
+        } else {
+            responseCO.message = StreamMessagesUtil.messageSource.getProperty("stream.logout.failed.someErrorOccurred")
+            responseCO.success = false
+            responseCO.status = CommonStreamingConstants.STREAMING_API_ERROR_CODE
+        }
         return responseCO
     }
 
