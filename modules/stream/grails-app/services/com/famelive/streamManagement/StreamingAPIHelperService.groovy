@@ -62,9 +62,10 @@ class StreamingAPIHelperService {
             apiLoginResponseCO.message = StreamMessagesUtil.messageSource.getProperty("stream.login.failed.accountDoesNotExist")
         } else if (user.accountLocked) {
             apiLoginResponseCO.message = StreamMessagesUtil.messageSource.getProperty("stream.login.failed.accountBlocked")
-        } else if (!user.isAccountVerified) {
+        }/* else if (!user.isAccountVerified) {
             apiLoginResponseCO.message = StreamMessagesUtil.messageSource.getProperty("stream.login.failed.accountNotVerified")
-        } else {
+        } //We are considering account will be verified after login*/
+        else {
             isEligibleToAuthorize = true
         }
         if (isEligibleToAuthorize) {
